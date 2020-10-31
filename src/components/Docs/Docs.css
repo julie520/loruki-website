@@ -1,0 +1,47 @@
+/* Docs */
+.docs-head img {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.docs-main a:hover {
+  font-weight: bold;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .docs-head {
+    text-align: center;
+  }
+  
+  .docs-head img{
+    justify-self: center;
+  }
+
+
+}
+
+/* Mobile */
+@media (max-width: 500px) { 
+}

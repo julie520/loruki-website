@@ -1,0 +1,161 @@
+/* Showcase */
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/* Stats */
+.stats {
+  padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* cli */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1s ease-in;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+}
